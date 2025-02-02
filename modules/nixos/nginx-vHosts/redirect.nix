@@ -1,0 +1,6 @@
+{
+  config,
+  lib,
+  ...
+}:
+{vHost = {};}.vHost
