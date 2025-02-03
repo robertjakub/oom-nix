@@ -5,9 +5,9 @@
   ...
 }: let
   inherit (lib) mkIf mkOption types optionalString;
-  fn = import ../../../lib {inherit lib;};
+  # fn = import ../../../lib {inherit lib;};
 
-  oh-my-posh = pkgs.callPackage ((fn.relativeToRoot) "pkgs/oh-my-posh") {};
+  # oh-my-posh = pkgs.callPackage ((fn.relativeToRoot) "pkgs/oh-my-posh") {};
   cfg = config.modules.zsh;
   zgen-zsh = ./zgen.zsh;
   zsh-autoload = ./autoload;
@@ -18,14 +18,13 @@ in {
   };
 
   config = mkIf cfg.enable {
-    environment.systemPackages =
-      [oh-my-posh]
-      ++ (with pkgs; [
-        bat
-        eza
-        fasd
-        fzf
-      ]);
+    environment.systemPackages = with pkgs; [
+      oh-my-posh
+      bat
+      eza
+      fasd
+      fzf
+    ];
 
     environment.shellAliases = import ./aliases.nix {inherit lib pkgs;};
     environment.variables = import ./variables.nix {};
