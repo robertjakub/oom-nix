@@ -88,7 +88,7 @@ in {
             zgen load zsh-users/zsh-history-substring-search # ~5ms
             zgen load zsh-users/zsh-syntax-highlighting
 
-            zgen load junegunn/fzf shell # ~2ms
+            zgen load junegunn/fzf shell v0.58.0 # ~2ms
             zgen load zsh-users/zsh-completions
             # zgen load romkatv/powerlevel10k powerlevel10k
 
