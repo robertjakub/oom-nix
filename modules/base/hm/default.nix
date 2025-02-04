@@ -8,5 +8,5 @@
 in {
   imports = fn.scanPaths ./.;
   nixpkgs.config.allowUnfree = cfg.defaults.allowUnfree;
-  home.stateVersion = "24.11";
+  home.stateVersion = "25.05";
 }
