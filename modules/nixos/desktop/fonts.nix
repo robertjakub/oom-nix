@@ -27,7 +27,7 @@ in {
           font-awesome
           fira
           raleway
-          martian-mono
+          # martian-mono # FIXME
           nerd-fonts.droid-sans-mono
           nerd-fonts.jetbrains-mono
           nerd-fonts.fira-code
