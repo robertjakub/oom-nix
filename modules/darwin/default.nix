@@ -5,6 +5,6 @@ in {
   config = {
     # services.activate-system.enable = true;
     # services.nix-daemon.enable = true;
-    system.stateVersion = 4;
+    system.stateVersion = 5;
   };
 }
