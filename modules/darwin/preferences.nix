@@ -1,6 +1,7 @@
 {lib, ...}: let
   inherit (lib) mkDefault;
 in {
+  security.pam.services.sudo_local.touchIdAuth = true;
   system.defaults = {
     dock.autohide = mkDefault false;
     dock.autohide-delay = 0.10;
@@ -11,6 +12,5 @@ in {
     universalaccess.mouseDriverCursorSize = 2.5;
     # screencapture.location = "~/Pictures/screenshots";
     # screensaver.askForPasswordDelay = 10;
-    security.pam.services.sudo_local.touchIdAuth = true;
   };
 }
