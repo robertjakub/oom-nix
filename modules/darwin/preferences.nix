@@ -11,5 +11,6 @@ in {
     universalaccess.mouseDriverCursorSize = 2.5;
     # screencapture.location = "~/Pictures/screenshots";
     # screensaver.askForPasswordDelay = 10;
+    security.pam.services.sudo_local.touchIdAuth = true;
   };
 }
