@@ -124,10 +124,8 @@ in {
       users.git = {
         uid = config.ids.uids.git;
         description = "Forgejo daemon user";
-        isNormalUser = true;
         home = config.services.forgejo.stateDir;
         group = "forgejo";
-        createHome = true;
         useDefaultShell = true;
       };
     };
