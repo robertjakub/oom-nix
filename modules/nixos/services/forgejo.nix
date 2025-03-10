@@ -119,12 +119,17 @@ in {
       group = "forgejo";
     };
 
-    users.users.git = {
-      description = "forgejo Service";
-      isNormalUser = true;
-      home = config.services.forgejo.stateDir;
-      createHome = true;
-      useDefaultShell = true;
+    users = {
+      groups.forgejo.gid = config.ids.gids.git;
+      users.git = {
+        uid = config.ids.uids.git;
+        description = "Forgejo daemon user";
+        isNormalUser = true;
+        home = config.services.forgejo.stateDir;
+        group = "forgejo";
+        createHome = true;
+        useDefaultShell = true;
+      };
     };
   };
 }
