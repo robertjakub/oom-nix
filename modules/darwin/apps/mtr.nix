@@ -9,5 +9,4 @@
 in
   mkIf (elem "mtr" cfg.apps) {
     environment.systemPackages = [pkgs.mtr];
-    security.pam.enableSudoTouchIdAuth = true;
   }
