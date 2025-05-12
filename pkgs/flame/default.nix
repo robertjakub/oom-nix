@@ -4,7 +4,7 @@
   fetchFromGitHub,
   buildNpmPackage,
   python3,
-  nodejs_18,
+  nodejs,
   nixosTests,
 }: let
   pname = "flame";
@@ -35,7 +35,7 @@ in
   buildNpmPackage {
     inherit pname version src;
 
-    nativeBuildInputs = [nodejs_18 python3];
+    nativeBuildInputs = [nodejs python3];
     npmDepsHash = "sha256-IkXLNI624IhLqsfJAJdi/kNJMvPTe5p+aCnuUTJISPE=";
 
     patches = [
