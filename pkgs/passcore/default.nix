@@ -1,6 +1,5 @@
 {
   lib,
-  stdenv,
   pkgs,
   buildNpmPackage,
   buildDotnetModule,

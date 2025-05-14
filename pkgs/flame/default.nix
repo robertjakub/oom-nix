@@ -1,11 +1,9 @@
 {
   lib,
-  stdenv,
   fetchFromGitHub,
   buildNpmPackage,
   python3,
   nodejs,
-  nixosTests,
 }: let
   pname = "flame";
   version = "2.3.1";

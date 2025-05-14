@@ -1,5 +1,4 @@
 {
-  stdenv,
   lib,
   fetchFromGitHub,
   buildGoModule,
@@ -13,7 +12,7 @@
     sha256 = "sha256-X5PuXXDnKFZFHGVgTdE26U1M0aQ2UQ/tFV0oDOGRT3E=";
   };
 in
-  buildGoModule rec {
+  buildGoModule {
     inherit pname version src;
 
     modRoot = "./.";

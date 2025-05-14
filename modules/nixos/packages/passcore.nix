@@ -2,11 +2,11 @@
   config,
   lib,
   pkgs,
-  fn,
+  fnlib,
   ...
 }: let
   inherit (lib) mkIf mkEnableOption mkOption types mdDoc isStorePath;
-  passcore = pkgs.callPackage ((fn.relativeToRoot) "pkgs/passcore") {};
+  passcore = pkgs.callPackage ((fnlib.relativeToRoot) "pkgs/passcore") {};
   cfg = config.services.passcore;
 in {
   options.services.passcore = {
