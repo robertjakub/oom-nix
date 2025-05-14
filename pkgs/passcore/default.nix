@@ -4,7 +4,7 @@
   buildNpmPackage,
   buildDotnetModule,
   dotnet-sdk,
-  nodejs_18,
+  nodejs,
   ...
 }: let
   pname = "passcore";
@@ -23,7 +23,7 @@
     npmDepsHash = "sha256-ZdPjOL8+u7pYdyVttNn62Uh3RMsR4qQ5ntKm0augPGk=";
     dontNpmBuild = true;
 
-    nativeBuildInputs = [nodejs_18];
+    nativeBuildInputs = [nodejs];
 
     postPatch = ''
       cp -f ${./package-lock.json} package-lock.json
