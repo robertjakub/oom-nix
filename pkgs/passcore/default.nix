@@ -51,7 +51,7 @@ in
     '';
 
     buildPhase = ''
-      dotnet publish -o ./appbuild -c Release /p:PASSCORE_PROVIDER=LDAP Unosquare.PassCore.sln
+      ${pkgs.dotnetCorePackages.sdk_6_0}/bin/dotnet publish -o ./appbuild -c Release /p:PASSCORE_PROVIDER=LDAP Unosquare.PassCore.sln
     '';
     installPhase = ''
       runHook preInstall
