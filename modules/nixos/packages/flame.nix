@@ -5,8 +5,7 @@
   ...
 }: let
   inherit (lib) mkIf mkEnableOption mkOption types mdDoc isStorePath;
-  fn = import ../../lib {inherit lib;};
-  flame = pkgs.callPackage ((fn.relativeToRoot) "pkgs/flame") {};
+  flame = pkgs.callPackage ../../../pkgs/flame {};
   cfg = config.services.flame;
 in {
   options.services.flame = {
