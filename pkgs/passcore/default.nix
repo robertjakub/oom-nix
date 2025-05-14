@@ -4,7 +4,7 @@
   buildNpmPackage,
   buildDotnetModule,
   nodejs,
-  dotnet-sdk,
+  dotnet-sdk_6,
   ...
 }: let
   pname = "passcore";
@@ -40,7 +40,7 @@ in
   buildDotnetModule {
     inherit pname version src;
 
-    nativeBuildInputs = [nodejs dotnet-sdk];
+    nativeBuildInputs = [nodejs dotnet-sdk_6];
     nugetDeps = ./deps.nix;
     projectFile = "Unosquare.PassCore.sln";
     buildType = "Release";
