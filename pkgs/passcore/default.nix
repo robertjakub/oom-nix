@@ -64,8 +64,8 @@ in
     '';
 
     executables = [];
-    dotnet-sdk = pkgs.dotnetCorePackages.sdk_6_0;
-    dotnet-runtime = pkgs.dotnetCorePackages.aspnetcore_6_0;
+    dotnet-sdk = pkgs.dotnetCorePackages.sdk_7_0;
+    dotnet-runtime = pkgs.dotnetCorePackages.aspnetcore_7_0;
 
     meta = with lib; {
       description = " A self-service password change utility for Active Directory.";
