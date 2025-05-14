@@ -40,7 +40,7 @@ in
   buildDotnetModule rec {
     inherit pname version src;
 
-    nativeBuildInputs = [nodejs_18 dotnet-sdk];
+    nativeBuildInputs = [nodejs dotnet-sdk];
     nugetDeps = ./deps.nix;
     projectFile = "Unosquare.PassCore.sln";
     buildType = "Release";
