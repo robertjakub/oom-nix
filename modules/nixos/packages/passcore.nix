@@ -109,7 +109,7 @@ in {
         export AppSettings__LdapPassword="$(<"$CREDENTIALS_DIRECTORY/password")"
 
         cd ${passcore}
-        ${pkgs.dotnet-sdk}/bin/dotnet Unosquare.PassCore.Web.dll
+        ${pkgs.dotnet-sdk_6}/bin/dotnet Unosquare.PassCore.Web.dll
       '';
     };
 
