@@ -3,7 +3,6 @@
   pkgs,
   buildNpmPackage,
   buildDotnetModule,
-  dotnet-sdk,
   nodejs,
   ...
 }: let
@@ -37,10 +36,10 @@
     '';
   };
 in
-  buildDotnetModule rec {
+  buildDotnetModule {
     inherit pname version src;
 
-    nativeBuildInputs = [nodejs dotnet-sdk];
+    nativeBuildInputs = [nodejs];
     nugetDeps = ./deps.nix;
     projectFile = "Unosquare.PassCore.sln";
     buildType = "Release";
