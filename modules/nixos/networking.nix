@@ -4,7 +4,7 @@
   ...
 }: let
   inherit (lib) mkIf mkDefault mkForce;
-  gnome = config.services.xserver.desktopManager.gnome.enable;
+  gnome = config.services.desktopManager.gnome.enable;
 in {
   networking = {
     inherit (config.modules) domain;
