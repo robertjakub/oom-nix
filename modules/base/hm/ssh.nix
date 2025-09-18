@@ -12,11 +12,14 @@ in {
   config = mkIf (cfg.ssh.enable) {
     programs.ssh = {
       enable = true;
-      forwardAgent = true;
-      addKeysToAgent = "yes";
-      compression = true;
-      serverAliveInterval = 60;
-      hashKnownHosts = false;
+      enableDefaultConfig = false;
+      matchBlocks."*" = {
+        hashKnownHosts = false;
+        serverAliveInterval = 60;
+        compression = true;
+        forwardAgent = true;
+        addKeysToAgent = "yes";
+      };
       # userKnownHostsFile = "~/.ssh/known_hosts.d/%k";
       # extraConfig = ''
       # '';
