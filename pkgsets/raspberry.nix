@@ -4,7 +4,7 @@
   ...
 }: {
   config.modules.pkgsets.pkgsets.raspberry.pkgs = with pkgs; [
-    libraspberrypi
+    # libraspberrypi
     raspberrypi-eeprom
     raspberrypifw
     ubootRaspberryPi4_64bit
