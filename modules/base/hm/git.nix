@@ -22,8 +22,11 @@ in {
   config = mkIf (cfg.git.enable) {
     programs.git = {
       enable = true;
-      inherit (cfg.git) userName userEmail;
-      extraConfig = {
+      settings = {
+        user = {
+          email = cfg.git.userEmail;
+          name = cfg.git.userName;
+        };
         core = {
           quotepath = false;
           commitGraph = true;
