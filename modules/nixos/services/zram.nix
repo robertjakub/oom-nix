@@ -4,7 +4,7 @@
   ...
 }: let
   inherit (lib) mkIf elem;
-  inherit (lib) mkOption types;
+  inherit (lib) mkOption types mkDefault;
   cfg = config.modules.services;
 in {
   options.modules.services.zram = {
@@ -17,8 +17,8 @@ in {
   config = mkIf (cfg.zram.enable) {
     zramSwap = {
       enable = true;
-      memoryPercent = 50;
-      algorithm = "zstd";
+      memoryPercent = mkDefault 50;
+      algorithm = mkDefault "zstd";
     };
   };
 }
