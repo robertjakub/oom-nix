@@ -25,7 +25,7 @@ in {
       enable = true;
       sftpFlags = ["-f AUTHPRIV" "-l INFO"];
       settings = {
-        KexAlgorithms = ["curve25519-sha256@libssh.org"];
+        KexAlgorithms = ["sntrup761x25519-sha512" "mlkem768x25519-sha256" "curve25519-sha256@libssh.org"];
         KbdInteractiveAuthentication = false;
         PasswordAuthentication = cfg.openssh.passauth;
         PermitRootLogin = "prohibit-password"; # XXX FIXme
