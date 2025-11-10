@@ -23,7 +23,7 @@ in {
           helvetica-neue-lt-std
           liberation_ttf
           corefonts
-          vistafonts
+          vista-fonts
           font-awesome
           fira
           raleway
