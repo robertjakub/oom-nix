@@ -61,7 +61,7 @@ in {
     nix.settings = {
       max-jobs = 4;
       cores = 0;
-      sandbox = true;
+      sandbox = mkDefault true;
       experimental-features = ["nix-command" "flakes"];
       require-sigs = false;
       trusted-users = ["root" "toor" "oom"];
